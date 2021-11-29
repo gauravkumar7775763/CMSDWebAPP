@@ -1,0 +1,12 @@
+<div class="center">
+<mat-button-toggle-group name="fontStyle" aria-label="Font Style" #toggleGroup [value] = "selectedValue"> 
+    <mat-button-toggle value="Admin Login" (change) = "onToggle($event.value)">Admin Login</mat-button-toggle>
+    <mat-button-toggle value="Customer" (change) = "onToggle($event.value)">Customer Login</mat-button-toggle>      
+  </mat-button-toggle-group>
+  <div  *ngIf="selectedValue == 'Admin Login'" >
+    <app-adminlogin class = "logincomp"></app-adminlogin>
+  </div> 
+  <div  *ngIf="selectedValue == 'Customer'" >
+    <app-customerlogin class = "logincomp"></app-customerlogin>
+  </div> 
+</div>
